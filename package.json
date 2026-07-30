@@ -1,0 +1,39 @@
+{
+  "name": "docedit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal full-stack collaborative document editor (take-home project). See TRD.md and ARCHITECTURE.md for design context.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@tiptap/react": "^2.6.6",
+    "@tiptap/starter-kit": "^2.6.6",
+    "@tiptap/extension-underline": "^2.6.6",
+    "mongoose": "^8.5.2",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.15",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.35",
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "ts-jest": "^29.2.4",
+    "typescript": "^5.5.4"
+  }
+}
