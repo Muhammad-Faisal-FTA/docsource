@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+}
+
+body {
+  background-color: theme("colors.paper");
+  color: theme("colors.ink");
+}
+
+/*
+ * Tiptap renders the editable area as a plain contenteditable div with
+ * no built-in styling. This block gives the ProseMirror content area
+ * (and read-only previews using the same content) sane, readable
+ * typography without needing a heavyweight prose plugin for a project
+ * this size.
+ */
+.tiptap-content {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.7;
+  color: theme("colors.ink");
+}
+
+.tiptap-content h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin: 0.8em 0 0.4em;
+}
+
+.tiptap-content h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0.8em 0 0.4em;
+}
+
+.tiptap-content h3 {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin: 0.8em 0 0.4em;
+}
+
+.tiptap-content p {
+  margin: 0.6em 0;
+}
+
+.tiptap-content ul,
+.tiptap-content ol {
+  margin: 0.6em 0;
+  padding-left: 1.4em;
+}
+
+.tiptap-content ul {
+  list-style: disc;
+}
+
+.tiptap-content ol {
+  list-style: decimal;
+}
+
+.tiptap-content:focus {
+  outline: none;
+}
+
+/* Tiptap's placeholder extension isn't in use (kept minimal for this
+   project's scope); a plain :empty selector covers the common case of
+   showing a hint in a brand-new blank document. */
+.tiptap-content p.is-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: theme("colors.line");
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
